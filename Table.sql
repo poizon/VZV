@@ -1,0 +1,10 @@
+CREATE TABLE `anagram`.`phones` (
+  `id` INT UNSIGNED NOT NULL AUTO_INCREMENT,
+  `name` VARCHAR(12) NOT NULL,
+  `phone` VARCHAR(11) NOT NULL,
+  `created` TIMESTAMP NULL DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`),
+  UNIQUE INDEX `phone_UNIQUE` (`phone` ASC));
+
+
+-- LOAD DATA INFILE 'C:\\ProgramData\\MySQL\\MySQL Server 5.7\\Uploads\\dummy_data.csv' INTO TABLE anagram.phones FIELDS TERMINATED BY ',' LINES TERMINATED BY '\n' STARTING BY '';
